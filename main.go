@@ -3,6 +3,7 @@ package main
 import (
 	"net/http"
 	"github.com/gin-gonic/gin"
+	_ "github.com/heavenlwf/go-blog/pkg/config"
 	)
 
 var db = make(map[string]string)
