@@ -1,1 +1,1 @@
-package Conf
+package config

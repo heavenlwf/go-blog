@@ -5,9 +5,9 @@ use blog;
 CREATE TABLE `blog_tag` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `name` varchar(100) DEFAULT '' COMMENT '标签名称',
-  `created_on` int(10) unsigned DEFAULT '0' COMMENT '创建时间',
+  `created_on` datetime not null COMMENT '创建时间',
   `created_by` varchar(100) DEFAULT '' COMMENT '创建人',
-  `modified_on` int(10) unsigned DEFAULT '0' COMMENT '修改时间',
+  `modified_on` datetime DEFAULT null COMMENT '修改时间',
   `modified_by` varchar(100) DEFAULT '' COMMENT '修改人',
   `state` tinyint(3) unsigned DEFAULT '1' COMMENT '状态 0为禁用、1为启用',
   PRIMARY KEY (`id`)
@@ -21,9 +21,9 @@ CREATE TABLE `blog_article` (
   `title` varchar(100) DEFAULT '' COMMENT '文章标题',
   `desc` varchar(255) DEFAULT '' COMMENT '简述',
   `content` text,
-  `created_on` int(11) DEFAULT NULL,
+  `created_on` datetime not null,
   `created_by` varchar(100) DEFAULT '' COMMENT '创建人',
-  `modified_on` int(10) unsigned DEFAULT '0' COMMENT '修改时间',
+  `modified_on` datetime COMMENT '修改时间',
   `modified_by` varchar(255) DEFAULT '' COMMENT '修改人',
   `state` tinyint(3) unsigned DEFAULT '1' COMMENT '状态 0为禁用1为启用',
   PRIMARY KEY (`id`)
