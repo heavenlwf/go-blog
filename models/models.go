@@ -6,15 +6,12 @@ import (
 	"log"
 	"github.com/heavenlwf/go-blog/pkg/config"
 	_ "github.com/jinzhu/gorm/dialects/mysql"
-	"time"
-)
+	)
 
 var db *gorm.DB
 
 type Model struct {
-	ID int 					`gorm:"primary_key" json:"id"`
-	CreatedOn time.Time 	`json:"created_on"`
-	ModifiedOn time.Time 	`json:"modified_on"`
+	gorm.Model
 }
 
 func init() {

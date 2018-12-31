@@ -5,11 +5,12 @@ use blog;
 CREATE TABLE `blog_tag` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `name` varchar(100) DEFAULT '' COMMENT '标签名称',
-  `created_on` datetime not null COMMENT '创建时间',
+  `created_at` datetime not null COMMENT '创建时间',
   `created_by` varchar(100) DEFAULT '' COMMENT '创建人',
-  `modified_on` datetime DEFAULT null COMMENT '修改时间',
+  `updated_at` datetime DEFAULT null COMMENT '修改时间',
   `modified_by` varchar(100) DEFAULT '' COMMENT '修改人',
   `state` tinyint(3) unsigned DEFAULT '1' COMMENT '状态 0为禁用、1为启用',
+  `deleted_at` datetime DEFAULT null COMMENT '修改时间',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='文章标签管理';
 " | mysql -uroot
